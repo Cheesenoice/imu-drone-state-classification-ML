@@ -58,8 +58,6 @@ Top feature importances (from logs):
 
 ## 4) Report & Visual Highlights
 
-- Full report (local file): [`REPORT_Drone_Project.pdf`](REPORT_Drone_Project.pdf)
-
 | System Architecture                             | Data Distribution                                    |
 | ----------------------------------------------- | ---------------------------------------------------- |
 | ![System Architecture](images/architecture.png) | ![Class Distribution Pie Chart](images/piechart.png) |
