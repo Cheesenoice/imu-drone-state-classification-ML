@@ -80,7 +80,17 @@ Top feature importances (from logs):
 - **Model evaluation:** classification report, confusion matrix, and error analysis.
 - **Practical inference pipeline:** dedicated raw-test processing and blind-test evaluation.
 
-## 6) Notebook Pipeline
+## 6) Personal Data Collection (Built by Me)
+
+- I personally designed the data-collection protocol, recorded the sensor sessions, and curated the dataset used in this project.
+- Data was captured from smartphone IMU sensors (Accelerometer + Gyroscope) at **100Hz** and exported as raw logs.
+- I organized collection into three scenarios to improve generalization:
+  - **Training set (isolated actions):** repeated single maneuvers to learn clean class signatures.
+  - **Validation set (sequential script):** continuous flight flow (Idle → Takeoff → Hover → Maneuver → Landing).
+  - **Blind test (free flight):** unseen sessions with harder turbulence/noise conditions.
+- I also handled labeling, timestamp synchronization, segment trimming, and final train/val/test packaging.
+
+## 7) Notebook Pipeline
 
 The full workflow is organized into 9 notebooks:
 
@@ -103,7 +113,7 @@ The full workflow is organized into 9 notebooks:
 9. `09_Final_Blind_Test.ipynb`  
    Final blind test and reporting metrics extraction.
 
-## 7) Project Structure
+## 8) Project Structure
 
 ```text
 data/
@@ -121,7 +131,7 @@ notebooks/
   01_...09_...ipynb    # Complete experimentation pipeline
 ```
 
-## 8) Tech Stack
+## 9) Tech Stack
 
 - Python
 - NumPy, Pandas
@@ -131,7 +141,7 @@ notebooks/
 - joblib
 - Jupyter/Colab
 
-## 9) How to Reproduce
+## 10) How to Reproduce
 
 ### A. Run in order (recommended)
 
@@ -139,14 +149,15 @@ Open and run notebooks in this order:
 
 `01 -> 02 -> 03 -> 04 -> 05 -> 06 -> 07 -> 08 -> 09`
 
-## 10) CV / LinkedIn Bullet Ideas
+## 11) CV / LinkedIn Bullet Ideas
 
 - Built an end-to-end ML pipeline for drone flight-state recognition from 100Hz IMU signals.
+- Personally designed and executed the full IMU data collection protocol (train/validation/blind-test) and dataset curation.
 - Designed an 84-dimensional time + frequency feature set, then optimized to 30 features for lightweight inference.
 - Trained a multi-class Random Forest and achieved ~87.5% blind-test accuracy.
 - Implemented model evaluation with confusion matrix, error analysis, and inference-speed reporting.
 
-## 11) Current Limitations & Future Improvements
+## 12) Current Limitations & Future Improvements
 
 - Class imbalance still exists for rare classes (`TAKEOFF`, `LANDING`).
 - No deep benchmark yet on real edge hardware (power/latency profiling).
@@ -155,7 +166,7 @@ Open and run notebooks in this order:
   - Collect more samples for rare classes.
   - Compare sequence models (`1D-CNN`, `LSTM`, `TCN`) for time-series classification.
 
-## 12) Data Availability Note
+## 13) Data Availability Note
 
 This repository **keeps all data and artifacts** (raw/interim/processed/features/models) so the full pipeline can be reproduced without missing files.
 
