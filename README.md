@@ -5,7 +5,7 @@
 ## 🔗 Quick Links
 
 - Report PDF: [REPORT_Drone_Project.pdf](https://drive.google.com/file/d/1_yZA7aBtUC88873U7m2eNC3-CviHxv_0/view?usp=sharing)
-- Slide: [Hybrid_Drone_Maneuver_Recognition.pdf](https://drive.google.com/file/d/1qqXcVIpiIhbdmgUpk92Jnq99PUuEYuH4/view?usp=sharing)
+- Slide: [Hybrid_Drone_Maneuver_Recognition.pdf](https://drive.google.com/file/d/1IyFJc8vBktswysPRQmxioDnUE178zGS0/view?usp=sharing)
 
 ## 1) Project Objectives
 
